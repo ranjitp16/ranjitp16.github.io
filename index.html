@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Ranjit - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -14,29 +14,75 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            line-height: 1.6;
         }
 
         .container {
-            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             animation: fadeIn 1.5s ease-in;
         }
 
         h1 {
-            font-size: 5rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2.5rem;
+            color: #333;
             margin-bottom: 1rem;
             animation: slideDown 1s ease-out;
         }
 
-        .subtitle {
+        h3 {
             font-size: 1.5rem;
-            color: #f0f0f0;
-            animation: slideUp 1s ease-out;
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            color: #764ba2;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            color: #555;
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+        }
+
+        blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+            color: #666;
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 2rem 0;
         }
 
         @keyframes fadeIn {
@@ -59,31 +105,71 @@
             }
         }
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
         @media (max-width: 768px) {
-            h1 {
-                font-size: 3rem;
+            body {
+                padding: 1rem;
             }
-            .subtitle {
-                font-size: 1.2rem;
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.25rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hello World</h1>
-        <p class="subtitle">Welcome to my portfolio</p>
+        <h1>नमस्ते 👋. I'm Ranjit</h1>
+        
+        <p>🚀 <strong>Tech Enthusiast | Problem Solver | Builder of Smart Systems</strong></p>
+        
+        <p>I'm Ranjit — a curious mind who loves solving puzzles, digital or otherwise. Whether it's <strong>cracking code</strong>, <strong>streamlining systems</strong>, or <strong>making products work smarter</strong>, I'm always up for a challenge.</p>
+        
+        <p>I thrive on <strong>curiosity</strong>, <strong>experimentation</strong>, and the joy of building something meaningful. When I'm not deep in code, you'll find me exploring new ideas, learning how things work, or tinkering with projects that make life a little more efficient — and a lot more fun.</p>
+        
+        <hr>
+        
+        <h3>💡 What I'm Into</h3>
+        <ul>
+            <li>🧠 Building clean, scalable systems</li>
+            <li>⚙️ Automating workflows & optimizing performance</li>
+            <li>☁️ Cloud + Web development</li>
+            <li>🧩 Experimenting with new frameworks and architectures</li>
+        </ul>
+        
+        <hr>
+        
+        <h3>🧰 Tech Stack</h3>
+        <p><strong>Languages & Frameworks:</strong><br>
+        <code>C#</code> • <code>.NET</code> • <code>ASP.NET Core</code> • <code>EF Core</code> • <code>JavaScript</code> • <code>TypeScript</code> • <code>React</code> • <code>Angular</code> • <code>Tailwind CSS</code></p>
+        
+        <p><strong>DevOps & Cloud:</strong><br>
+        <code>Terraform</code> • <code>Azure</code> • <code>MinIO</code></p>
+        
+        <p><strong>Databases:</strong><br>
+        <code>SQL</code> • <code>PostgreSQL</code></p>
+        
+        <hr>
+        
+        <h3>🌱 Currently Exploring</h3>
+        <ul>
+            <li>Advanced <strong>system design</strong> & <strong>distributed architectures</strong></li>
+            <li><strong>AI-assisted development</strong> and <strong>infrastructure as code</strong></li>
+        </ul>
+        
+        <hr>
+        
+        <blockquote>
+            <p>"The best solutions often start with a simple question: <em>What if?</em>"</p>
+        </blockquote>
+        
+        <blockquote>
+            <p>"अक्सर सबसे अच्छे समाधान एक साधारण सवाल से शुरू होते हैं: <em>क्या होगा अगर?</em>"</p>
+        </blockquote>
     </div>
 </body>
 </html>
