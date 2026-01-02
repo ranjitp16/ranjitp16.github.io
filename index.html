@@ -15,9 +15,9 @@
         }
 
         body {
-            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-family: 'Source Code Pro', 'Courier New', monospace !important;
             min-height: 100vh;
-            background: #000000;
+            background: rgb(36, 35, 35);
             padding: 2rem;
             line-height: 1.6;
         }
@@ -26,43 +26,42 @@
             max-width: 97%;
             margin: 0 auto;
             padding: 3rem;
-<!--             border:  2px solid #00ff00; -->
             animation: fadeIn 1.5s ease-in;
         }
 
         /* Terminal cursor effect */
         .container::before {
             content: '> ';
-            color: #00ff00;
+            color: rgb(34, 226, 127);
             font-weight: bold;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #00ff00;
+            color: rgb(34, 226, 127);
             margin-bottom: 1rem;
             animation: flicker 2s infinite alternate;
         }
 
         h3 {
             font-size: 1.5rem;
-            color: #00ff00;
+            color: rgb(34, 226, 127);
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
 
         h3:: before {
             content: '$ ';
-            color: #00ff00;
+            color: rgb(34, 226, 127);
         }
 
         p {
-            color: #00cc00;
+            color: rgb(255, 255, 255);
             margin-bottom:  1rem;
         }
 
         strong {
-            color: #33ff33;
+            color: rgb(228, 228, 92);
             font-weight: 700;
         }
 
@@ -72,7 +71,7 @@
         }
 
         li {
-            color: #00cc00;
+            color: rgb(255, 255, 255);
             margin-bottom: 0.5rem;
             padding-left: 1.5rem;
         }
@@ -81,7 +80,7 @@
             content: '> ';
             position: absolute;
             left: 0;
-            color: #00ff00;
+            color: rgb(34, 226, 127);
         }
 
         li {
@@ -89,15 +88,13 @@
         }
 
         code {
-<!--             background: #001a00; -->
             padding: 4px 8px;
-<!--             border:  1px solid #00ff00; -->
-            color: #00ff00;
-            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            color: rgb(255, 255, 255);
+            font-family: 'Source Code Pro', 'Courier New', monospace !important;
         }
 
         blockquote {
-            border-left: 4px solid #00ff00;
+            border-left: 4px solid rgb(34, 226, 127);
             padding-left: 1rem;
             margin: .75rem 0;
             color:  #00cc00;
@@ -106,7 +103,7 @@
 
         hr {
             border:  none;
-            border-top:  1px solid #00ff00;
+            border-top:  1px solid rgb(34, 226, 127);
             margin: 2rem 0;
         }
 
