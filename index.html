@@ -15,76 +15,99 @@
         }
 
         body {
-            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000000;
             padding: 2rem;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 97%;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
+            background: #0a0a0a;
             padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+<!--             border:  2px solid #00ff00; -->
             animation: fadeIn 1.5s ease-in;
+        }
+
+        /* Terminal cursor effect */
+        .container::before {
+            content: '> ';
+            color: #00ff00;
+            font-weight: bold;
         }
 
         h1 {
             font-size: 2.5rem;
-            color: #333;
+            color: #00ff00;
             margin-bottom: 1rem;
-            animation: slideDown 1s ease-out;
+            animation: flicker 2s infinite alternate;
         }
 
         h3 {
             font-size: 1.5rem;
-            color: #667eea;
+            color: #00ff00;
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
 
+        h3:: before {
+            content: '$ ';
+            color: #00ff00;
+        }
+
         p {
-            color: #555;
-            margin-bottom: 1rem;
+            color: #00cc00;
+            margin-bottom:  1rem;
         }
 
         strong {
-            color: #764ba2;
+            color: #33ff33;
+            font-weight: 700;
         }
 
         ul {
-            list-style: none;
-            margin-bottom: 1rem;
+            list-style:  none;
+            margin-bottom:  1rem;
         }
 
         li {
-            color: #555;
+            color: #00cc00;
             margin-bottom: 0.5rem;
             padding-left: 1.5rem;
         }
 
+        li::before {
+            content: '> ';
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+        }
+
+        li {
+            position: relative;
+        }
+
         code {
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            color: #667eea;
-            font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+<!--             background: #001a00; -->
+            padding: 4px 8px;
+<!--             border:  1px solid #00ff00; -->
+            color: #00ff00;
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
         }
 
         blockquote {
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #00ff00;
             padding-left: 1rem;
             margin: 1.5rem 0;
-            color: #666;
+            color:  #00cc00;
             font-style: italic;
         }
 
         hr {
-            border: none;
-            border-top: 1px solid #ddd;
+            border:  none;
+            border-top:  1px solid #00ff00;
             margin: 2rem 0;
         }
 
@@ -97,14 +120,12 @@
             }
         }
 
-        @keyframes slideDown {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
+        @keyframes flicker {
+            0%, 100% {
                 opacity: 1;
+            }
+            50% {
+                opacity: 0.95;
             }
         }
 
@@ -122,33 +143,53 @@
                 font-size: 1.25rem;
             }
         }
+
+        /* Scanline effect */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events:  none;
+            z-index: 9999;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>नमस्ते 👋. I'm Ranjit</h1>
+        <h1>
+          Hey, I'm Ranjit</h1>
         
-        <p>🚀 <strong>Tech Enthusiast | Problem Solver | Builder of Smart Systems</strong></p>
+        <p><strong>Tech Enthusiast | Problem Solver | Builder of Smart Systems</strong></p>
         
-        <p>I'm Ranjit — a curious mind who loves solving puzzles, digital or otherwise. Whether it's <strong>cracking code</strong>, <strong>streamlining systems</strong>, or <strong>making products work smarter</strong>, I'm always up for a challenge.</p>
+        <p>I'm Ranjit — a curious mind who loves solving puzzles, digital or otherwise. Whether it's <strong>cracking code</strong>, <strong>streamlining systems</strong>, or <strong>making processes smarter</strong> — I'm all in. </p>
         
-        <p>I thrive on <strong>curiosity</strong>, <strong>experimentation</strong>, and the joy of building something meaningful. When I'm not deep in code, you'll find me exploring new ideas, learning how things work, or tinkering with projects that make life a little more efficient — and a lot more fun.</p>
+        <p>I thrive on <strong>curiosity</strong>, <strong>experimentation</strong>, and the joy of building something meaningful. When I'm not deep in code, you'll find me exploring new ideas, learning something new, or just contemplating how things work.</p>
         
         <hr>
         
-        <h3>💡 What I'm Into</h3>
+        <h3>What I'm Into</h3>
         <ul>
-            <li>🧠 Building clean, scalable systems</li>
-            <li>⚙️ Automating workflows & optimizing performance</li>
-            <li>☁️ Cloud + Web development</li>
-            <li>🧩 Experimenting with new frameworks and architectures</li>
+            <li>Building clean, scalable systems</li>
+            <li>Automating workflows & optimizing performance</li>
+            <li>Cloud + Web development</li>
+            <li>Network and security</li>
         </ul>
         
         <hr>
         
-        <h3>🧰 Tech Stack</h3>
+        <h3>Tech Stack</h3>
         <p><strong>Languages & Frameworks:</strong><br>
-        <code>C#</code> • <code>.NET</code> • <code>ASP.NET Core</code> • <code>EF Core</code> • <code>JavaScript</code> • <code>TypeScript</code> • <code>React</code> • <code>Angular</code> • <code>Tailwind CSS</code></p>
+        <code>C#</code> • <code>.NET</code> • <code>ASP.NET Core</code> • <code>EF Core</code> • <code>JavaScript</code> • <code>TypeScript</code> • <code>React</code> • <code>Angular</code> • <code>Node.js</code></p>
         
         <p><strong>DevOps & Cloud:</strong><br>
         <code>Terraform</code> • <code>Azure</code> • <code>MinIO</code></p>
@@ -158,9 +199,9 @@
         
         <hr>
         
-        <h3>🌱 Currently Exploring</h3>
+        <h3>Currently Exploring</h3>
         <ul>
-            <li>Advanced <strong>system design</strong> & <strong>distributed architectures</strong></li>
+            <li><strong>system design</strong> & <strong>distributed architectures</strong></li>
             <li><strong>AI-assisted development</strong> and <strong>infrastructure as code</strong></li>
         </ul>
         
@@ -171,8 +212,8 @@
         </blockquote>
         
         <blockquote>
-            <p>"अक्सर सबसे अच्छे समाधान एक साधारण सवाल से शुरू होते हैं: <em>क्या होगा अगर?</em>"</p>
+            <p>"अक्सर सबसे अच्छे समाधान एक साधारण सवाल से शुरू होते हैं: <em>क्या होगा अगर? </em>"</p>
         </blockquote>
-    </div>
+    </code>
 </body>
 </html>
